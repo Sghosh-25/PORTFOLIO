@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   User2,
@@ -40,6 +40,7 @@ const infoData = [
     text: "Mohisgote 1st Lane, Kolkata-700102",
   },
 ];
+
 const qualificationData = [
   {
     title: "education",
@@ -77,6 +78,7 @@ const qualificationData = [
     ],
   },
 ];
+
 const skillData = [
   {
     title: "skills",
@@ -107,11 +109,12 @@ const skillData = [
     ],
   },
 ];
+
 const About_us = () => {
   const getData = (arr, title) => {
     return arr.find((item) => item.title === title);
   };
-  // console.log(getData(qualificationData,"experience"));
+
   return (
     <section className="xl:h-[860px] pb-12 xl:py-24 ">
       <div className="container mx-auto">
@@ -162,7 +165,7 @@ const About_us = () => {
                         return (
                           <div
                             className="flex items-center gap-x-4 mx-auto xl:mx-0"
-                            key={index}
+                            key={index} 
                           >
                             <div className="text-primary">{item.icon}</div>
                             <div>{item.text}</div>
@@ -199,7 +202,7 @@ const About_us = () => {
                               return (
                                 <div
                                   className=" flex gap-x-8 group "
-                                  key={index}
+                                  key={index}  
                                 >
                                   <div className="h-[84px] w-[1px] bg-border relative ml-3 ">
                                     <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500 "></div>
@@ -237,7 +240,7 @@ const About_us = () => {
                               return (
                                 <div
                                   className=" flex gap-x-8 group "
-                                  key={index}
+                                  key={index} 
                                 >
                                   <div className="h-[84px] w-[1px] bg-border relative ml-3 ">
                                     <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500 "></div>
@@ -270,7 +273,7 @@ const About_us = () => {
                     <div className="mb-16">
                       <h4 className=" text-xl font-semibold mb-2 ">Skills</h4>
                       <div className=" border-b border-border mb-4 "></div>
-                      {/* skil list  */}
+                      {/* skill list  */}
                       <div>
                         {getData(skillData, "skills").data.map(
                           (item, index) => {
@@ -278,7 +281,7 @@ const About_us = () => {
                             return (
                               <div
                                 className="w-2/4 text-center xl:text-left mx-auto xl:mx-0 "
-                                key={index}
+                                key={index}  
                               >
                                 <div>
                                   <div className=" font-medium  ">{name}</div>
@@ -298,7 +301,7 @@ const About_us = () => {
                         {getData(skillData, "tools").data.map((item, index) => {
                           const { imgPath } = item;
                           return (
-                            <div>
+                            <div key={index}>
                               <Image
                                 src={imgPath}
                                 width={48}
