@@ -7,6 +7,16 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+    },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1400px",
+    },
     extend: {
       colors: {
         background: "hsl(var(--background))",
@@ -67,6 +77,10 @@ module.exports = {
         about_shape_dark: "url(/about/shape-dark.svg)",
         dots_light: "url(/dots-light.svg)",
         dots_dark: "url(/dots-dark.svg)",
+        work_project_bg_light:"url(/work/project-bg-light.png)",
+        work_project_bg_dark:"url(/work/project-bg-dark.png)",
+        contact_illustration_light:"url(/contact/illustration-light.svg)",
+        contact_illustration_dark:"url(/contact/illustration-dark.svg)",
       },
     },
   },
